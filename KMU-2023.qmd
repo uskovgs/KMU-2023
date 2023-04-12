@@ -2,7 +2,6 @@
 title: "ЯРКИЙ РЕНТГЕНОВСКИЙ КВАЗАР PG1634+706 ПО ДАННЫМ ОБСЕРВАТОРИИ СРГ"
 author: <a href="mailto:uskov@cosmos.ru">Усков Г.С., аспирант ИКИ РАН</a>
 date: 2023-04-12
-institute: ИКИ РАН
 format: 
   revealjs:
     slide-number: c/t
