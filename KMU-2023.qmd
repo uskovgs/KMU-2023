@@ -175,19 +175,19 @@ gt::gt(balmer)
 
 ::: {.column width="50%"}
 
-![](images/eros-map.png){width="2000"}
+![](images/eros-map.png){width="600"}
 
 
-![](images/art-map.jpg){width="2000"}
+![](images/art-map.jpg){width="600"}
 
-Карта всего неба телескопа (сверху) eROSTIA 0.3-2 кэВ, (снизу) ART-XC 4-12 кэВ.
+Карта всего неба телескопа (сверху) eROSTIA 0.3-2 кэВ, (снизу) ART-XC 4-12 кэВ
 
 
 :::
 
 ::: {.column width="50%"}
 
-![](images/srg.png){width="569.7"}
+![](images/srg.png){width="470"}
 
 :::
 
@@ -248,7 +248,7 @@ gt::gt(balmer)
 | 23 ноября        | Т1-7        | Т1-7       | < 2.5              |
 | 26 ноября        | Т1-7        | Т1-7      | ~ 12               |
 
-![](images/EXP.png){width="700"}
+![](images/EXP.png){width="600"}
 
 :::
 
@@ -268,7 +268,7 @@ gt::gt(balmer)
 
 ::: {.column width="80%"}
 
-![](images/lc_short.png)
+![](images/lc_short.png){width="1000"}
 
 :::
 
