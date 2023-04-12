@@ -1,11 +1,374 @@
 ---
-title: "KMU-2023"
+title: "ЯРКИЙ РЕНТГЕНОВСКИЙ КВАЗАР PG1634+706 ПО ДАННЫМ ОБСЕРВАТОРИИ СРГ"
+author: <a href="mailto:uskov@cosmos.ru">Усков Г.С., аспирант ИКИ РАН</a>
+date: 2023-04-12
+institute: ИКИ РАН
+format: 
+  revealjs:
+    slide-number: c/t
+    width: 1600
+    height: 900
+    logo: "https://upload.wikimedia.org/wikipedia/commons/b/b5/Space_Research_Institute_Logo.jpg"
+    footer: "[КМУ 2023](https://kmu.cosmos.ru/)"
+    css: ["theme/theme.css"]
+    # theme: simple
+    echo: true
 ---
 
-## Quarto
+## История
 
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
 
-```{r}
-1 + 1
+* Развитие радиоастрономии в 60-х
+
+* Обнаружение квазаров (QSO, "quasi-stellar object" ):
+  
+  * Протяженные в радио и компактные в оптическом диапазоне
+
+  * L > $L_{MW}$ , R ~ Солнечная система
+  
+  * pp-реакций недостаточно -> аккреция на СМЧД $(10^6-10^8)M_\odot$
+  
+
+* Открытие излучения квазаров в рентгеновском диапазоне
+
+## История
+
+
+:::: {.columns}
+
+::: {.column width="40%"}
+
+
+
+* В 1963г. Мартин Шмидт на оптическом спектре заметил закономерность $\lambda=1.16~\lambda_0$
+
+
+```{r, echo=FALSE, out.width="600", fig.cap='Источник: isdc.unige.ch/3c273'}
+knitr::include_graphics('images/3c273.jpg')
 ```
+
+
+
+:::
+
+::: {.column width="60%"}
+
+Серия Бальмера
+
+```{r echo=FALSE,  out.width="600"}
+#| tbl-colwidths: [200, 40]
+
+balmer <- dplyr::tibble(
+       `Обозначение` = c("n", "Длина волны, A"),
+                `Hα` = c(3, 6563),
+                `Hβ` = c(4, 4861),
+                `Hγ` = c(5, 4341),
+                `Hδ` = c(6, 4102),
+)
+
+gt::gt(balmer)
+```
+:::
+
+::::
+
+* z=0.16 (650 МПк) и $m_V\approx13^m$ -> не звезда
+
+* Аналогично для 3C48, z=0.37
+
+## Структура АЯГ
+
+* В центре ЧД $10^6M_\odot < M < 10^{10} M_\odot$
+
+* Аккреционный диск - главный источник энергии, T < $10^6$ K
+
+![](images/accretion-disk.gif)
+
+## Структура АЯГ
+
+:::: {.columns}
+
+::: {.column width="40%"}
+
+**Рентгеновская корона**
+
+* T ~ $10^7$ К
+
+* Тепловой спектр 
+
+ 
+  * Степенной спектр с завалом на высоких энергиях $F_X\sim E^{-\Gamma}exp(-E/E_c)$, $E_c \approx 40-300$ keV
+  
+
+  * Комптоновский горб ~ 30 кэВ
+  
+
+  * Флуоресцентная линия Fe $K\alpha$ 6.4 кэВ.
+
+:::
+
+::: {.column width="60%"}
+
+![](images/agn-xray-spectrum.png)
+
+:::
+
+::::
+
+
+## Структура АЯГ
+
+::::: {.columns}
+
+::::: {.column width="50%"}
+
+
+### Broad Line Region (BLR)
+
+- Излучает в линиях
+
+- R < 1 Пк от ЧД (по картированию). 
+  
+- FWHM ~ 3000 км/с >> 10 км/с (T~1e4 K)
+
+
+::: {.fragment}
+
+### Narrow Line Region (NLR)
+  
+- Излучает в линиях
+  
+- R ~ 100 Пк от ЧД. 
+  
+- FWHM 300-500км/с, но все равно шире теплового уширения.
+
+
+:::
+
+::: {.fragment}
+
+### Тор
+
+- R ~ 1 Пк от ЧД, светит в ИК
+
+
+:::
+
+::: {.fragment}
+
+ У 10% имеются джеты
+:::
+
+:::::
+
+::::: {.column width="50%"}
+
+![](images/agn-unified-model.jpg){width="2000"}
+
+:::::
+
+:::::
+
+## Обсерватория СРГ
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+![](images/eros-map.png){width="2000"}
+
+
+![](images/art-map.jpg){width="2000"}
+
+Карта всего неба телескопа (сверху) eROSTIA 0.3-2 кэВ, (снизу) ART-XC 4-12 кэВ.
+
+
+:::
+
+::: {.column width="50%"}
+
+![](images/srg.png){width="569.7"}
+
+:::
+
+::::
+
+## PG1634+706
+
+:::: {.columns}
+
+::: {.column width="30%"}
+
+- Радиотихий квазар
+
+- Z ~ 1.334
+
+- $L_{(2-10)keV}\sim 10^{46}$ эрг/с
+
+- $L_{bol} \sim 10^{48}$ эрг/с
+
+- $M_{\rm BH} \sim 10^{10} M_{\odot}$ 
+
+(Page et. al. 2004)
+
+:::
+
+::: {.column width="70%"}
+
+![](images/sdss.png)
+
+:::
+
+
+::::
+
+
+## Наблюдения квазара обсерваторией СРГ
+
+:::: {.columns}
+
+::: {.column width="40%"}
+
+- CalPV фаза
+
+- Диапазон (0.2 – 20 кэВ) 
+
+- Или (0.5 — 47 кэВ) на z=1.334
+
+- Самые продолжительные наблюдения
+
+:::
+
+::: {.column width="60%" }
+
+| **Дата, 2019г.** | **eROSITA** | **ART-XC** | **Offset, arcmin** |
+| ---------------- | ----------- | ---------- | ------------------ |
+| 29 сентября      | Т6          | Т1-7       | ~ 0                |
+| 20 октября       | Т1-7        | Т1-7       | ~ 2.5              |
+| 23 ноября        | Т1-7        | Т1-7       | < 2.5              |
+| 26 ноября        | Т1-7        | Т1-7      | ~ 12               |
+
+![](images/EXP.png){width="700"}
+
+:::
+
+::::
+
+## Кривая блеска
+
+:::: {.columns}
+
+::: {.column width="20%"}
+
+* По данным eROSITA
+
+* Значимая переменность
+
+:::
+
+::: {.column width="80%"}
+
+![](images/lc_short.png)
+
+:::
+
+::::
+
+
+## Долговременная кривая блеска
+
+* Переменность ~ 2 
+
+![](images/LC.png){fig-align="center" width="1300"}
+
+
+## Рентгеновский спектр
+
+:::: {.columns}
+
+::: {.column width="40%"}
+
+* По данным eROSITA
+
+* Модель TBAbs (PL)
+
+* $N_{\rm H}^{MW} = 5.74 \times 10^{20}$ см$^{-2}$
+
+* $\Gamma \approx 2$
+
+
+:::
+
+::: {.column width="60%"}
+
+![](images/ero-spec-1.png)
+
+:::
+
+::::
+
+## Рентгеновский спектр
+
+:::: {.columns}
+
+::: {.column width="40%"}
+
+* По данным eROSITA
+
+* Модель TBAbs (PL + FeKa)
+
+* (0.7-10) кэВ
+
+* $N_{\rm H}^{MW} = 5.74 \times 10^{20}$ см$^{-2}$
+
+* $\Gamma = 1.87 \pm 0.01$
+
+* $\rm FeK\alpha=6.45\pm0.09$
+
+* $\sigma_{\rm FeK\alpha} = 0.48\pm0.08$
+
+* $\rm EW_{FeK\alpha}=0.131_{-0.022}^{+0.026}$
+
+* Cstat=679.13
+
+* dof=654
+
+:::
+
+::: {.column width="60%"}
+
+
+::: {.r-stack}
+
+![](images/kmu_ero_spec_cts.png){.fragment}
+
+![](images/kmu_ero_spec_model.png){.fragment}
+
+:::
+
+:::
+
+::::
+
+
+
+## Заключение
+
+- Произведен анализ рентгеновского спектра квазара
+
+- Впервые измерены характеристики FeKa 
+
+    - Задетектирована с большой начимость ($p<10^{-6}$)
+    
+    - Энергия линии согласуется с Park et. al. 2008
+    
+    - Указание на комплекс линий -> частично ионизованная отражающая среда
+
+- Получен типичный наклон спектра $\Gamma = 1.9$
+    
+    - Не подтверждает утверждение, что с увеличением $L_X$ спектр становится круче
+    
+
+
+
